@@ -1,0 +1,520 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:GND #PWR0101
+U 1 1 63749830
+P 5250 5200
+F 0 "#PWR0101" H 5250 4950 50  0001 C CNN
+F 1 "GND" H 5250 5050 50  0000 C CNN
+F 2 "" H 5250 5200 50  0001 C CNN
+F 3 "" H 5250 5200 50  0001 C CNN
+	1    5250 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 63749E58
+P 5150 3650
+F 0 "#PWR0102" H 5150 3400 50  0001 C CNN
+F 1 "GND" H 5150 3700 50  0000 C CNN
+F 2 "" H 5150 3650 50  0001 C CNN
+F 3 "" H 5150 3650 50  0001 C CNN
+	1    5150 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 3650 5250 3650
+Text GLabel 5300 4650 0    50   Input ~ 0
++3V3
+Text GLabel 5250 3850 0    50   Input ~ 0
++3V3
+Text Label 4400 4400 0    50   ~ 0
+I2C_SCL
+Text Label 4400 4300 0    50   ~ 0
+I2C_SDA
+Wire Wire Line
+	4350 4300 4750 4300
+Wire Wire Line
+	4750 4300 4750 4950
+Wire Wire Line
+	4750 4950 5350 4950
+Wire Wire Line
+	4350 4400 4850 4400
+Wire Wire Line
+	4850 4400 4850 4850
+Wire Wire Line
+	4850 4850 5350 4850
+Wire Wire Line
+	4850 4400 4850 4050
+Connection ~ 4850 4400
+Connection ~ 4750 4300
+NoConn ~ 5250 4150
+Wire Wire Line
+	4850 4050 5250 4050
+Wire Wire Line
+	4750 3950 5250 3950
+Wire Wire Line
+	5250 3650 5250 3750
+NoConn ~ 6700 3850
+NoConn ~ 6700 3950
+NoConn ~ 6700 4050
+NoConn ~ 5250 4250
+NoConn ~ 6700 4150
+$Comp
+L CNLCapstone:DS3231-Module U4
+U 1 1 63742FE3
+P 6200 4100
+F 0 "U4" H 6425 3435 50  0000 C CNN
+F 1 "DS3231-Module" H 6425 3526 50  0000 C CNN
+F 2 "" H 6200 4100 50  0001 C CNN
+F 3 "" H 6200 4100 50  0001 C CNN
+	1    6200 4100
+	-1   0    0    1   
+$EndComp
+Text GLabel 2400 1100 0    50   Input ~ 0
++VPANEL
+Text GLabel 2400 1200 0    50   Input ~ 0
+-VPANEL
+Text GLabel 2400 1350 0    50   Input ~ 0
++VBATT
+Text GLabel 2400 1450 0    50   Input ~ 0
+-VBATT
+$Comp
+L Device:Solar_Cell SC1
+U 1 1 637662E2
+P 1400 1150
+F 0 "SC1" H 1508 1246 50  0000 L CNN
+F 1 "Solar_Cell" H 1508 1155 50  0000 L CNN
+F 2 "" V 1400 1210 50  0001 C CNN
+F 3 "~" V 1400 1210 50  0001 C CNN
+	1    1400 1150
+	1    0    0    -1  
+$EndComp
+Text GLabel 1450 1350 2    50   Input ~ 0
+-VPANEL
+Text GLabel 1450 900  2    50   Input ~ 0
++VPANEL
+Wire Wire Line
+	1450 900  1400 900 
+Wire Wire Line
+	1400 900  1400 950 
+Wire Wire Line
+	1800 2050 1800 2000
+Wire Wire Line
+	1750 2050 1800 2050
+Wire Wire Line
+	1800 1650 1800 1700
+Wire Wire Line
+	1750 1650 1800 1650
+Text GLabel 1750 1650 0    50   Input ~ 0
++VBATT
+Text GLabel 1750 2050 0    50   Input ~ 0
+-VBATT
+$Comp
+L Device:Battery_Cell BT1
+U 1 1 6375EAD8
+P 1800 1900
+F 0 "BT1" H 1918 1996 50  0000 L CNN
+F 1 "Battery_Cell" H 1900 1900 50  0000 L CNN
+F 2 "" V 1800 1960 50  0001 C CNN
+F 3 "~" V 1800 1960 50  0001 C CNN
+	1    1800 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 1350 1450 1350
+Wire Wire Line
+	1400 1250 1400 1350
+$Comp
+L CNLCapstone:AS7341-AdaFruit U3
+U 1 1 639898A9
+P 5800 4900
+F 0 "U3" V 5729 5078 50  0000 L CNN
+F 1 "AS7341-AdaFruit" V 5820 5078 50  0000 L CNN
+F 2 "" H 5900 4950 50  0001 C CNN
+F 3 "" H 5900 4950 50  0001 C CNN
+	1    5800 4900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5300 4650 5350 4650
+Wire Wire Line
+	5250 4750 5350 4750
+Wire Wire Line
+	5250 4750 5250 5200
+NoConn ~ 5350 5050
+NoConn ~ 5350 5150
+$Comp
+L SensorNode:DFR0535_Solar_Power_Manager_12V U6
+U 1 1 64932E23
+P 3100 1300
+F 0 "U6" H 3125 1815 50  0000 C CNN
+F 1 "DFR0535_Solar_Power_Manager_12V" H 3125 1724 50  0000 C CNN
+F 2 "" H 3100 1300 50  0001 C CNN
+F 3 "" H 3100 1300 50  0001 C CNN
+	1    3100 1300
+	1    0    0    -1  
+$EndComp
+Text GLabel 4150 1700 2    50   Input ~ 0
++5V
+Wire Wire Line
+	3850 1700 4150 1700
+Wire Wire Line
+	3850 1450 4150 1450
+Wire Wire Line
+	3850 1550 3900 1550
+Text GLabel 2300 3650 1    50   Input ~ 0
++5V_GSM
+$Comp
+L power:GND #PWR0104
+U 1 1 64945A0D
+P 1300 3850
+F 0 "#PWR0104" H 1300 3600 50  0001 C CNN
+F 1 "GND" H 1305 3677 50  0000 C CNN
+F 2 "" H 1300 3850 50  0001 C CNN
+F 3 "" H 1300 3850 50  0001 C CNN
+	1    1300 3850
+	1    0    0    -1  
+$EndComp
+Text GLabel 1250 3650 1    50   Input ~ 0
++12V
+Text GLabel 4150 1450 2    50   Input ~ 0
++12V
+$Comp
+L CNLCapstone:LM2596S-Module U5
+U 1 1 6378D03E
+P 1750 3700
+F 0 "U5" H 1750 3965 50  0000 C CNN
+F 1 "LM2596S-Module" H 1750 3874 50  0000 C CNN
+F 2 "" H 1750 3700 50  0001 C CNN
+F 3 "" H 1750 3700 50  0001 C CNN
+	1    1750 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 6494D6BD
+P 2250 3850
+F 0 "#PWR0105" H 2250 3600 50  0001 C CNN
+F 1 "GND" H 2255 3677 50  0000 C CNN
+F 2 "" H 2250 3850 50  0001 C CNN
+F 3 "" H 2250 3850 50  0001 C CNN
+	1    2250 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 3850 2250 3850
+Wire Wire Line
+	2200 3700 2300 3700
+$Comp
+L power:GND #PWR0106
+U 1 1 6494F405
+P 3900 1550
+F 0 "#PWR0106" H 3900 1300 50  0001 C CNN
+F 1 "GND" H 4000 1550 50  0000 C CNN
+F 2 "" H 3900 1550 50  0001 C CNN
+F 3 "" H 3900 1550 50  0001 C CNN
+	1    3900 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 6494F7C6
+P 3900 1800
+F 0 "#PWR0107" H 3900 1550 50  0001 C CNN
+F 1 "GND" H 4000 1800 50  0000 C CNN
+F 2 "" H 3900 1800 50  0001 C CNN
+F 3 "" H 3900 1800 50  0001 C CNN
+	1    3900 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 1800 3900 1800
+Wire Notes Line
+	1150 700  4550 700 
+Wire Notes Line
+	4550 700  4550 2250
+Wire Notes Line
+	4550 2250 1150 2250
+Wire Notes Line
+	1150 2250 1150 700 
+Text GLabel 3650 2750 0    50   Input ~ 0
++12V
+Wire Wire Line
+	3750 2750 3750 2900
+$Comp
+L power:GND #PWR03
+U 1 1 6495CF82
+P 3950 5000
+F 0 "#PWR03" H 3950 4750 50  0001 C CNN
+F 1 "GND" H 4050 5000 50  0000 C CNN
+F 2 "" H 3950 5000 50  0001 C CNN
+F 3 "" H 3950 5000 50  0001 C CNN
+	1    3950 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 2750 3750 2750
+Text GLabel 4000 2750 2    50   Input ~ 0
++3V3
+Wire Wire Line
+	3950 2900 3950 2750
+Wire Wire Line
+	3950 2750 4000 2750
+Text GLabel 2850 4650 2    50   Input ~ 0
++5V_GSM
+Text Label 2700 4300 0    50   ~ 0
+SW_UART_RX
+Wire Wire Line
+	2700 4750 2700 4300
+Text Label 2750 4400 0    50   ~ 0
+SW_UART_TX
+Wire Wire Line
+	2750 4850 2750 4400
+Wire Wire Line
+	3950 4900 3950 5000
+Wire Wire Line
+	4750 3950 4750 4300
+Connection ~ 3950 4900
+Wire Wire Line
+	3850 4900 3950 4900
+Wire Wire Line
+	2750 4400 3350 4400
+Wire Wire Line
+	2700 4300 3350 4300
+Text GLabel 3350 3900 0    50   Input ~ 0
+LIGHT_LED
+Text GLabel 3350 4000 0    50   Input ~ 0
+VALVE_RELAY_SIG
+Text GLabel 3350 4100 0    50   Input ~ 0
+PUMP_RELAY_SIG
+$Comp
+L MCU_Module:Arduino_Nano_v3.x A1
+U 1 1 6495849A
+P 3850 3900
+F 0 "A1" H 3850 2650 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" H 3850 2550 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 3850 3900 50  0001 C CIN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 3850 3900 50  0001 C CNN
+	1    3850 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 4850 2750 4850
+Wire Wire Line
+	2450 4650 2850 4650
+Wire Wire Line
+	2450 4750 2700 4750
+NoConn ~ 2450 4450
+NoConn ~ 2450 4950
+NoConn ~ 2450 5050
+Wire Wire Line
+	2550 5200 2550 4550
+Wire Wire Line
+	2450 4550 2550 4550
+$Comp
+L CNLCapstone:SIM800L-V2-Module U2
+U 1 1 6398FB7D
+P 1800 4700
+F 0 "U2" H 1833 5265 50  0000 C CNN
+F 1 "SIM800L-V2-Module" H 1833 5174 50  0000 C CNN
+F 2 "" H 1800 5150 50  0001 C CNN
+F 3 "" H 1800 5150 50  0001 C CNN
+	1    1800 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 63748A73
+P 2550 5200
+F 0 "#PWR0103" H 2550 4950 50  0001 C CNN
+F 1 "GND" H 2550 5050 50  0000 C CNN
+F 2 "" H 2550 5200 50  0001 C CNN
+F 3 "" H 2550 5200 50  0001 C CNN
+	1    2550 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 3700 2300 3650
+Wire Wire Line
+	1300 3700 1250 3700
+Wire Wire Line
+	1250 3700 1250 3650
+Text GLabel 1900 6100 0    50   Input ~ 0
+PUMP_RELAY_SIG
+Wire Wire Line
+	1900 6100 1950 6100
+Text GLabel 1900 7150 0    50   Input ~ 0
+VALVE_RELAY_SIG
+Wire Wire Line
+	1900 7150 1950 7150
+Text GLabel 1950 5850 0    50   Input ~ 0
++5V
+Text GLabel 1950 6900 0    50   Input ~ 0
++5V
+$Comp
+L power:GND #PWR01
+U 1 1 649B0151
+P 1950 5950
+F 0 "#PWR01" H 1950 5700 50  0001 C CNN
+F 1 "GND" H 1850 5950 50  0000 C CNN
+F 2 "" H 1950 5950 50  0001 C CNN
+F 3 "" H 1950 5950 50  0001 C CNN
+	1    1950 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 649B0A51
+P 1950 7000
+F 0 "#PWR02" H 1950 6750 50  0001 C CNN
+F 1 "GND" H 1850 7000 50  0000 C CNN
+F 2 "" H 1950 7000 50  0001 C CNN
+F 3 "" H 1950 7000 50  0001 C CNN
+	1    1950 7000
+	1    0    0    -1  
+$EndComp
+Text GLabel 2750 6400 0    50   Input ~ 0
++12V
+Wire Wire Line
+	2750 6400 2800 6400
+Wire Wire Line
+	2800 6400 2800 6300
+Text GLabel 2750 7500 0    50   Input ~ 0
++12V
+Wire Wire Line
+	2750 7500 2800 7500
+Wire Wire Line
+	2800 7500 2800 7350
+Wire Wire Line
+	3200 6150 3450 6150
+Wire Wire Line
+	3200 7200 3400 7200
+$Comp
+L power:GND #PWR04
+U 1 1 649C2A4D
+P 3325 7000
+F 0 "#PWR04" H 3325 6750 50  0001 C CNN
+F 1 "GND" H 3325 7050 50  0000 C CNN
+F 2 "" H 3325 7000 50  0001 C CNN
+F 3 "" H 3325 7000 50  0001 C CNN
+	1    3325 7000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3325 7000 3400 7000
+Wire Wire Line
+	3375 5950 3450 5950
+NoConn ~ 3200 6000
+NoConn ~ 3200 7050
+$Comp
+L power:GND #PWR05
+U 1 1 649C1148
+P 3375 5950
+F 0 "#PWR05" H 3375 5700 50  0001 C CNN
+F 1 "GND" H 3375 6000 50  0000 C CNN
+F 2 "" H 3375 5950 50  0001 C CNN
+F 3 "" H 3375 5950 50  0001 C CNN
+	1    3375 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L SensorNode:SANYOU_RELAY_OPT_MODULE U1
+U 1 1 649DAF3C
+P 2600 5900
+F 0 "U1" H 2575 6175 50  0000 C CNN
+F 1 "SANYOU_RELAY_OPT_MODULE" H 2575 6084 50  0000 C CNN
+F 2 "" H 2200 5900 50  0001 C CNN
+F 3 "" H 2200 5900 50  0001 C CNN
+	1    2600 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L SensorNode:SANYOU_RELAY_OPT_MODULE U7
+U 1 1 649DBCFF
+P 2600 6950
+F 0 "U7" H 2575 7225 50  0000 C CNN
+F 1 "SANYOU_RELAY_OPT_MODULE" H 2575 7134 50  0000 C CNN
+F 2 "" H 2200 6950 50  0001 C CNN
+F 3 "" H 2200 6950 50  0001 C CNN
+	1    2600 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L SensorNode:WATER_VALVE M1
+U 1 1 649DC8D8
+P 3625 7225
+F 0 "M1" H 3654 6736 50  0000 C CNN
+F 1 "WATER_VALVE" H 3654 6827 50  0000 C CNN
+F 2 "" H 3625 7450 50  0001 C CNN
+F 3 "" H 3625 7375 50  0001 C CNN
+	1    3625 7225
+	1    0    0    1   
+$EndComp
+$Comp
+L SensorNode:WATER_PUMP M2
+U 1 1 649DF1DF
+P 3750 6150
+F 0 "M2" H 3704 5686 50  0000 C CNN
+F 1 "WATER_PUMP" H 3704 5777 50  0000 C CNN
+F 2 "" H 3750 6150 50  0001 C CNN
+F 3 "" H 3750 6150 50  0001 C CNN
+	1    3750 6150
+	1    0    0    1   
+$EndComp
+$Comp
+L SensorNode:Diode D1
+U 1 1 649DFC6A
+P 3400 7150
+F 0 "D1" V 3500 7100 50  0000 L CNN
+F 1 "Diode" V 3575 7050 50  0000 L CNN
+F 2 "" H 3400 7150 50  0001 C CNN
+F 3 "" H 3400 7150 50  0001 C CNN
+	1    3400 7150
+	0    1    1    0   
+$EndComp
+Connection ~ 3400 7200
+Wire Wire Line
+	3400 7200 3425 7200
+Wire Wire Line
+	3400 7050 3400 7000
+Connection ~ 3400 7000
+Wire Wire Line
+	3400 7000 3425 7000
+$Comp
+L SensorNode:Diode D2
+U 1 1 649E37E0
+P 3450 6100
+F 0 "D2" V 3550 6050 50  0000 L CNN
+F 1 "Diode" V 3625 6000 50  0000 L CNN
+F 2 "" H 3450 6100 50  0001 C CNN
+F 3 "" H 3450 6100 50  0001 C CNN
+	1    3450 6100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3450 6150 3450 6100
+Wire Wire Line
+	3450 6000 3450 5950
+Connection ~ 3450 6150
+Wire Wire Line
+	3450 6150 3475 6150
+Connection ~ 3450 5950
+Wire Wire Line
+	3450 5950 3475 5950
+Wire Wire Line
+	3400 7150 3400 7200
+$EndSCHEMATC

@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name SensorNode)(type Legacy)(uri ${KIPRJMOD}/SensorNode.lib)(options "")(descr ""))
+  (lib (name CNLCapstone)(type Legacy)(uri ${KIPRJMOD}/CNLCapstone.lib)(options "")(descr ""))
+  (lib (name ESP32-DEVKITC-32D)(type Legacy)(uri C:/Users/User/OneDrive/Desktop/ESP32-DEVKITC-32D/ESP32-DEVKITC-32D.lib)(options "")(descr ""))
+)
